@@ -1,0 +1,44 @@
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-menu button {
+  background: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,.2);
+  padding: 8px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 9999;
+}
+
+.modal {
+  background: white;
+  max-width: 500px;
+  margin: 15vh auto;
+  padding: 20px;
+  border-radius: 6px;
+}
