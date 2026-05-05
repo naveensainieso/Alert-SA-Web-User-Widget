@@ -4,7 +4,7 @@ import babel from '@rolldown/plugin-babel'
 
 // https://vite.dev/config/
 export default defineConfig({
-    base: "/Alert-SA-Web-User-Widget/",
+    base: "/Alert-SA-Web-User-Widget/dist",
   plugins: [
     react(),
     babel({ presets: [reactCompilerPreset()] })
