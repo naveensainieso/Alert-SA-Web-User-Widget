@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import UserMenu from './UserMenu';
 import Modals from './Modals';
 
@@ -6,13 +6,22 @@ export default function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [activeModal, setActiveModal] = useState(null);
 
+  useEffect(() => {
+    
+    const userInfo = localStorage.getItem('userInfo');
+    if (userInfo) {
+      setLoggedIn(true);
+    }
+
+  }, []);
+
   return (
     <>
       <UserMenu
         loggedIn={loggedIn}
         onOpen={setActiveModal}
         onLogout={() => {
-          
+
           localStorage.removeItem('userInfo');
           setLoggedIn(false)}
         
