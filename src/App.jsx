@@ -11,13 +11,21 @@ export default function App() {
       <UserMenu
         loggedIn={loggedIn}
         onOpen={setActiveModal}
-        onLogout={() => setLoggedIn(false)}
+        onLogout={() => {
+          
+          localStorage.removeItem('userInfo');
+          setLoggedIn(false)}
+        
+        }
       />
 
       <Modals
         active={activeModal}
         onClose={() => setActiveModal(null)}
         onLoginSuccess={() => {
+
+          localStorage.setItem('userInfo', JSON.stringify({ name: 'John Doe', email: 'john@gmail.com',jwt:'fake-jwt-token' }));
+
           setLoggedIn(true);
           setActiveModal(null);
         }}
@@ -25,4 +33,3 @@ export default function App() {
     </>
   );
 }
-``
