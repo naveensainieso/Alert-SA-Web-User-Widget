@@ -22,10 +22,18 @@ export default function UserMenu({ loggedIn, onOpen, onLogout }) {
         </button>
 
         <div className="dropdown-content">
-          <button onClick={() => onOpen('profile')}>My Profile</button>
-          <button onClick={() => onOpen('add-watchzone')}>Add Watch Zone</button>
-          <button onClick={() => onOpen('my-watchzones')}>My Watch Zones</button>
-          <button onClick={onLogout}>Logout</button>
+          <button style={{marginBottom: '5px',
+    borderBottom: '1px solid',
+    width: '300px'}} onClick={() => onOpen('profile')}>My Profile</button>
+          <button style={{marginBottom: '5px',
+    borderBottom: '1px solid',
+    width: '300px'}} onClick={() => onOpen('add-watchzone')}>Add Watch Zone</button>
+          <button style={{marginBottom: '5px',
+    borderBottom: '1px solid',
+    width: '300px'}} onClick={() => onOpen('my-watchzones')}>My Watch Zones</button>
+         <button style={{marginBottom: '5px',
+    borderBottom: '1px solid',
+    width: '300px'}} onClick={onLogout}>Logout</button>
         </div>
       </div>
     </div>
